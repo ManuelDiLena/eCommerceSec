@@ -1,18 +1,21 @@
 import Layout from '../../components/Layout'
-import Product from '../../components/Product';
+import Product from '../../components/Product'
 import { getItems } from '../../services/storeService'
 import Image from 'next/image'
+import style from '../../styles/Product.module.css'
 
 export default function Index({ products }) {
     return (
         <Layout>
             <h1>Store</h1>
-            {
-                products && 
-                    products.map((item) => (
-                        <Product key={item.id} item={item} showAs='Default' />
-                    ))
-            }
+            <div className={style.items}>
+                {
+                    products && 
+                        products.map((item) => (
+                            <Product key={item.id} item={item} showAs='Default' />
+                        ))
+                }
+            </div>
         </Layout>
     );
 }
