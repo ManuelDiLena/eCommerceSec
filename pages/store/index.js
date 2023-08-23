@@ -1,15 +1,17 @@
 import Layout from '../../components/Layout'
+import Product from '../../components/Product';
 import { getItems } from '../../services/storeService'
 import Image from 'next/image'
 
-export default function Index({items}) {
+export default function Index({ products }) {
     return (
         <Layout>
             <h1>Store</h1>
             {
-                items && items.map(item => <div key={item.id}>
-                    <Image src={item.image} alt='' width='200' height={200} />
-                    {item.title}</div>)
+                products && 
+                    products.map((item) => (
+                        <Product key={item.id} item={item} showAs='Default' />
+                    ))
             }
         </Layout>
     );
@@ -21,7 +23,7 @@ export async function getStaticProps() {
 
     return {
         props:{
-            items: res,
+            products: res,
         },
     }
 }
