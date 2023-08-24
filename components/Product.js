@@ -3,6 +3,7 @@ import Link from 'next/link'
 import style from '../styles/Product.module.css'
 
 export default function Product({ item, showAs }) {
+    
     if (showAs === 'Page') {
         return <div>Page</div>
     }
@@ -14,7 +15,7 @@ export default function Product({ item, showAs }) {
     return (
         <div className={style.item}>
             <div>
-                <Link href={`/store/url-to-my-component`}>
+                <Link href={`/store/${item.id}`}>
                     <Image 
                         src={item.image} 
                         alt={item.description} 
