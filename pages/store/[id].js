@@ -5,7 +5,7 @@ import { getItemData, getPathsFromIds } from '../../lib/utils';
 export default function ProductPage({ productInfo }) {
     return (
         <Layout>
-            <Product item={productInfo} showAs='Page' />
+            <Product item={productInfo.data} showAs='Page' />
         </Layout>
     );
 }

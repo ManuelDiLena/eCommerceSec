@@ -7,8 +7,26 @@ export default function Product({ item, showAs }) {
 
     if (showAs === 'Page') {
         return (
-            <div>
-                <h2>{item.title}</h2>
+            <div className={style.page}>
+                <div className={style.image}>
+                    <Image 
+                        src={item.image}
+                        alt={item.description}
+                        width={350}
+                        height={350}
+                    />
+                </div>
+
+                <div className={style.info}>
+                    <div>
+                        <h2 className={style.title}>{item.title}</h2>
+                    </div>
+                    <div className={style.price}>${item.price}</div>
+                    <div>{item.description}</div>
+                    <div>
+                        <button className={style.btnCart}>Add to Cart</button>
+                    </div>
+                </div>
             </div>
         );
     }
@@ -39,7 +57,7 @@ export default function Product({ item, showAs }) {
             </div>
             <div>${item.price}</div>
             <div>
-                <button>Add to Cart</button>
+                <button className={style.btnCart}>Add to Cart</button>
             </div>
         </div>
     );

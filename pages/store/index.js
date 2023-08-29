@@ -7,7 +7,6 @@ import style from '../../styles/Product.module.css'
 export default function Index({ products }) {
     return (
         <Layout>
-            <h1>Store</h1>
             <div className={style.items}>
                 {
                     products && 

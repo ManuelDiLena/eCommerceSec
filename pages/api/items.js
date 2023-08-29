@@ -42,7 +42,7 @@ export default function handler(req, res) {
     },
     {
         id: 5,
-        title: 'Glow in the Dark Sticker Pack',
+        title: 'Glow Dark Sticker Pack',
         price: 5,
         image: 'http://localhost:3000/img/stickers02.webp',
         description:

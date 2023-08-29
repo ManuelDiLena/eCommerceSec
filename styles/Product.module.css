@@ -20,3 +20,58 @@
     margin: 5px 0;
     color: #646363;
 }
+
+.page {
+    background-color: #FFFFFF;
+    padding: 40px;
+    display: flex;
+    box-shadow: 0 0 50px #646363;
+    transform: scale(0);
+    animation: scale 0.3s ease forwards;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.price {
+    font-size: 28px;
+    margin: 10px 0;
+}
+
+.image {
+    width: 350px;
+    min-width: 350px;
+}
+
+.title {
+    color: #646363;
+}
+
+.btnCart {
+    color: #646363;
+    background-color: #F5B316;
+    font-size: 26px;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btnCart:hover {
+    background-color: #db9f13;
+    color: #000000;
+}
+
+@keyframes scale {
+    from {
+        transform: scale(0);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
