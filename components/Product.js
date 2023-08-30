@@ -3,7 +3,7 @@ import Link from 'next/link'
 import style from '../styles/Product.module.css'
 import { convertToPath } from '../lib/utils';
 
-export default function Product({ item, showAs }) {
+export default function Product({ item, showAs, qty }) {
 
     if (showAs === 'Page') {
         return (

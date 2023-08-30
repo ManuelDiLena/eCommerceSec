@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import style from '../styles/Layout.module.css'
 import Menu from './Menu'
+import ShoppingCart from './ShoppingCart';
 
 export default function Layout({children, title}) {
     return (
@@ -11,9 +12,10 @@ export default function Layout({children, title}) {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
 
-            <Menu></Menu>
+            <Menu />
 
             <div className={style.container}>{children}</div>
+            <ShoppingCart />
         </div>
     );
 }
