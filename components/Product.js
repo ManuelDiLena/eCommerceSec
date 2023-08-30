@@ -1,7 +1,8 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import style from '../styles/Product.module.css'
-import { convertToPath } from '../lib/utils';
+import { convertToPath } from '../lib/utils'
+import CartBtn from './CartBtn'
 
 export default function Product({ item, showAs, qty }) {
 
@@ -24,7 +25,7 @@ export default function Product({ item, showAs, qty }) {
                     <div className={style.price}>${item.price}</div>
                     <div>{item.description}</div>
                     <div>
-                        <button className={style.btnCart}>Add to Cart</button>
+                        <CartBtn />
                     </div>
                 </div>
             </div>
@@ -56,9 +57,6 @@ export default function Product({ item, showAs, qty }) {
                 </h3>
             </div>
             <div>${item.price}</div>
-            <div>
-                <button className={style.btnCart}>Add to Cart</button>
-            </div>
         </div>
     );
 }

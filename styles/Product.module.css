@@ -28,6 +28,7 @@
     box-shadow: 0 0 50px #646363;
     transform: scale(0);
     animation: scale 0.3s ease forwards;
+    cursor: pointer;
 }
 
 .info {
