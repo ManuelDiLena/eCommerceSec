@@ -8,6 +8,7 @@ export default function CartBtn({ item }) {
     // Function to call the method that adds items to the cart
     function handleClick() {
         cart.addItemToCart(item)
+        cart.openCart()
     }
 
     return (
