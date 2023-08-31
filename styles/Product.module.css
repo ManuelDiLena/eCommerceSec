@@ -67,6 +67,14 @@
     color: #000000;
 }
 
+.listItem {
+    display: flex;
+    gap: 10px;
+    border-bottom: solid 1px #646363;
+    padding: 10px 0;
+    scroll-behavior: auto;
+}
+
 @keyframes scale {
     from {
         transform: scale(0);

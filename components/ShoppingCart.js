@@ -11,6 +11,13 @@ export default function ShoppingCart() {
         cart.closeCart()
     }
 
+    // Function to calculate and display the total cart amount
+    function getTotal() {
+        const total = cart.items.reduce((acc, item) => acc + item.qty * item.price, 0)
+
+        return total
+    }
+
     return (
         <div className={style.shoppingCart} style={{display: cart.isOpen ? 'block' : 'none'}}>
             <button onClick={handleCloseCart} className={style.btnClose}>
@@ -28,6 +35,7 @@ export default function ShoppingCart() {
                                 cart.items.map(item => <Product key={item.id} item={item} showAs='ListItem' qty={item.qty} />)
                             }
                         </div>
+                        <div className={style.total}>Total: ${getTotal()}</div>
                     </>
                 )
             }            

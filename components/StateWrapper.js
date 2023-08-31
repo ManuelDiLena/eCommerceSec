@@ -5,7 +5,7 @@ const AppContext = createContext({
     items: [],
     openCart: () => {},
     closeCart: () => {},
-    addItemToCart: () => {},
+    addItemToCart: (item) => {},
     getNumberOfItems: () => {},
 })
 
@@ -27,7 +27,7 @@ export default function StateWrapper({ children }) {
     // Function to add a product to the cart
     function handleAddItemToCart(item) {
         const temp = [...items]
-        const found = temp.find(product => product.id === item.id)
+        const found = temp.find((product) => product.id === item.id)
 
         if (found) {
             found.qty++
